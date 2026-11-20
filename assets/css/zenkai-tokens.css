@@ -1,0 +1,63 @@
+/* Zenkai, tokens de diseño. Versión 1.0, noviembre de 2026. */
+:root {
+  --zk-sumi: #16161A; /* Tinta: textos y botones principales */
+  --zk-washi: #F7F6F3; /* Papel: fondo principal */
+  --zk-kurenai: #D11F48; /* Acento: símbolo y una acción por pantalla */
+  --zk-yoru: #0E0E11; /* Noche: fondos oscuros puntuales */
+  --zk-kurenai-noche: #F2546F; /* Acento sobre fondos oscuros */
+  --zk-ishi: #6E6C74; /* Texto secundario */
+  --zk-sen: #E3E1DC; /* Líneas y bordes */
+  --zk-blanco: #FFFFFF; /* Superficies elevadas */
+  --zk-exito: #15803D; /* Estados correctos (solo interfaz) */
+  --zk-alerta: #A16207; /* Advertencias (solo interfaz) */
+  --zk-informacion: #2F5BD3; /* Avisos (solo interfaz) */
+  --zk-error: #C2410C; /* Errores (solo interfaz) */
+
+  --zk-font: Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --zk-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --zk-text-display: 800 56px/60px var(--zk-font); --zk-tracking-display: -0.015em;
+  --zk-text-titulo-1: 700 40px/48px var(--zk-font); --zk-tracking-titulo-1: -0.01em;
+  --zk-text-titulo-2: 700 28px/36px var(--zk-font); --zk-tracking-titulo-2: -0.005em;
+  --zk-text-titulo-3: 600 20px/28px var(--zk-font); --zk-tracking-titulo-3: 0;
+  --zk-text-cuerpo-grande: 400 18px/28px var(--zk-font); --zk-tracking-cuerpo-grande: 0;
+  --zk-text-cuerpo: 400 16px/26px var(--zk-font); --zk-tracking-cuerpo: 0;
+  --zk-text-pequeno: 400 14px/22px var(--zk-font); --zk-tracking-pequeno: 0;
+  --zk-text-nota: 500 12px/18px var(--zk-font); --zk-tracking-nota: 0.01em;
+
+  --zk-space-4: 4px;
+  --zk-space-8: 8px;
+  --zk-space-12: 12px;
+  --zk-space-16: 16px;
+  --zk-space-24: 24px;
+  --zk-space-32: 32px;
+  --zk-space-48: 48px;
+  --zk-space-64: 64px;
+  --zk-space-96: 96px;
+  --zk-space-128: 128px;
+
+  --zk-radius-control: 6px;
+  --zk-radius-container: 10px;
+  --zk-radius-chip: 999px;
+  --zk-border: 1px solid var(--zk-sen);
+  --zk-shadow-overlay: 0 1px 2px rgba(22, 22, 26, .06), 0 8px 24px rgba(22, 22, 26, .08);
+  --zk-focus: 0 0 0 2px var(--zk-washi), 0 0 0 4px var(--zk-kurenai);
+  --zk-ease: cubic-bezier(0.2, 0, 0, 1);
+  --zk-dur-micro: 150ms;
+  --zk-dur-panel: 250ms;
+  --zk-dur-brand: 400ms;
+}
+
+/* Modo oscuro: solo en productos, como preferencia de la persona usuaria. La web y los documentos son claros. */
+[data-tema="oscuro"] {
+  --zk-fondo: #0E0E11;
+  --zk-superficie: #17171B;
+  --zk-borde: #2A2A30;
+  --zk-texto: #F7F6F3;
+  --zk-texto-2: #A3A1A9;
+  --zk-acento: #F2546F;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --zk-dur-micro: 0ms; --zk-dur-panel: 0ms; --zk-dur-brand: 0ms; }
+}
